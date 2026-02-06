@@ -1,39 +1,184 @@
-<!-- Reemplaza la sección <div class="grid-catalogo"> de tu código anterior con esto: -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dulces Andinos | Catálogo Digital</title>
 
-<div class="grid-catalogo">
-    <!-- Producto 1: Brevas con Arequipe -->
-    <div class="producto-card">
-        <img src="https://cdn.pixabay.com" alt="Brevas con Arequipe" class="producto-img">
-        <div class="producto-info">
-            <span class="badge-disponible">Disponible hoy</span>
-            <h3>Brevas con Arequipe</h3>
-            <p>Brevas seleccionadas en almíbar con el toque secreto de la casa.</p>
-            <span class="precio">$12.000</span>
-            <a href="https://wa.me" class="btn-whatsapp">Pedir por WhatsApp</a>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom, #fff7ec, #ffe8cc);
+        color: #5a2d0c;
+    }
+
+    header {
+        background: linear-gradient(135deg, #d2691e, #ff9f43);
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.6rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px 20px;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 18px;
+        text-align: center;
+    }
+
+    .card-content h3 {
+        margin: 10px 0 5px;
+        font-size: 1.3rem;
+    }
+
+    .precio {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #d35400;
+        margin: 8px 0;
+    }
+
+    .estado {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+
+    .disponible {
+        background: #2ecc71;
+        color: white;
+    }
+
+    .agotado {
+        background: #e74c3c;
+        color: white;
+    }
+
+    footer {
+        background: #6f3d1b;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        margin-top: 40px;
+        font-size: 0.95rem;
+    }
+
+    footer strong {
+        color: #ffdd99;
+    }
+
+    .contacto {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍯 Dulces Andinos</h1>
+    <p>Postres tradicionales hechos con amor en Medellín</p>
+</header>
+
+<div class="container">
+
+    <div class="productos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52" alt="Brevas con arequipe">
+            <div class="card-content">
+                <h3>Brevas con Arequipe</h3>
+                <p>Brevas rellenas de arequipe artesanal.</p>
+                <div class="precio">$12.000</div>
+                <span class="estado disponible">Disponible</span>
+            </div>
         </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604908177522-429c7f25e5c8" alt="Natilla">
+            <div class="card-content">
+                <h3>Natilla Tradicional</h3>
+                <p>Natilla casera antioqueña.</p>
+                <div class="precio">$6.000</div>
+                <span class="estado disponible">Disponible</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Buñuelos">
+            <div class="card-content">
+                <h3>Buñuelos</h3>
+                <p>Crocantes por fuera, suaves por dentro.</p>
+                <div class="precio">$1.500 c/u</div>
+                <span class="estado disponible">Disponible</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589308078059-9723dfea1d61" alt="Postres variados">
+            <div class="card-content">
+                <h3>Combo Familiar</h3>
+                <p>Brevas + natilla + buñuelos.</p>
+                <div class="precio">$28.000</div>
+                <span class="estado agotado">Agotado</span>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Producto 2: Natilla Antioqueña -->
-    <div class="producto-card">
-        <img src="https://cdn.pixabay.com" alt="Natilla" class="producto-img">
-        <div class="producto-info">
-            <span class="badge-disponible">Disponible hoy</span>
-            <h3>Natilla Especial</h3>
-            <p>Natilla de maíz con coco y panela, suave y tradicional.</p>
-            <span class="precio">$8.500</span>
-            <a href="https://wa.me" class="btn-whatsapp">Pedir por WhatsApp</a>
-        </div>
-    </div>
-
-    <!-- Producto 3: Buñuelos -->
-    <div class="producto-card">
-        <img src="https://cdn.pixabay.com" alt="Buñuelos" class="producto-img">
-        <div class="producto-info">
-            <span class="badge-disponible">Recién salidos</span>
-            <h3>Buñuelos Calienticos</h3>
-            <p>Esponjosos por dentro y crocantes por fuera. 100% queso costeño.</p>
-            <span class="precio">$2.000 c/u</span>
-            <a href="https://wa.me" class="btn-whatsapp">Pedir por WhatsApp</a>
-        </div>
-    </div>
 </div>
+
+<footer>
+    <strong>Dulces Andinos</strong> – Tradición y sabor paisa ❤️  
+    <div class="contacto">
+        📞 WhatsApp: 300 000 0000 | 📍 Medellín, Antioquia
+    </div>
+</footer>
+
+</body>
+</html>
